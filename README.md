@@ -11,6 +11,7 @@ Authentication base package defining interfaces for authentication services to b
 [![GitHub license](https://img.shields.io/github/license/dotkernel/dot-authentication)](https://github.com/dotkernel/dot-authentication/blob/2.0/LICENSE.md)
 
 [![Build Static](https://github.com/dotkernel/dot-authentication/actions/workflows/continuous-integration.yml/badge.svg?branch=2.0)](https://github.com/dotkernel/dot-authentication/actions/workflows/continuous-integration.yml)
+[![codecov](https://codecov.io/gh/dotkernel/dot-authentication/graph/badge.svg?token=ZBZDEA3LY8)](https://codecov.io/gh/dotkernel/dot-authentication)
 
 [![SymfonyInsight](https://insight.symfony.com/projects/8a0dfa12-fdda-43d7-bdbe-1c6996b30c12/big.svg)](https://insight.symfony.com/projects/8a0dfa12-fdda-43d7-bdbe-1c6996b30c12)
 

@@ -6,7 +6,7 @@
 | Version | Supported          | PHP Version                                                                                                        |
 |---------|--------------------|--------------------------------------------------------------------------------------------------------------------|
 | 2.x     | :white_check_mark: | ![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-authentication/2.3.4) |
-
+| <= 1.x  | :x:                |                                                                                                                    |
 
 ## Reporting Potential Security Issues
 
