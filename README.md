@@ -10,13 +10,14 @@ Authentication base package defining interfaces for authentication services to b
 [![GitHub stars](https://img.shields.io/github/stars/dotkernel/dot-authentication)](https://github.com/dotkernel/dot-authentication/stargazers)
 [![GitHub license](https://img.shields.io/github/license/dotkernel/dot-authentication)](https://github.com/dotkernel/dot-authentication/blob/2.0/LICENSE.md)
 
-[![Build Static](https://github.com/dotkernel/dot-authentication/actions/workflows/static-analysis.yml/badge.svg?branch=2.0)](https://github.com/dotkernel/dot-authentication/actions/workflows/static-analysis.yml)
+[![Build Static](https://github.com/dotkernel/dot-authentication/actions/workflows/continuous-integration.yml/badge.svg?branch=2.0)](https://github.com/dotkernel/dot-authentication/actions/workflows/continuous-integration.yml)
 
 [![SymfonyInsight](https://insight.symfony.com/projects/8a0dfa12-fdda-43d7-bdbe-1c6996b30c12/big.svg)](https://insight.symfony.com/projects/8a0dfa12-fdda-43d7-bdbe-1c6996b30c12)
 
 ## Installation
 
 Run the following command in you project directory
+
 ```bash
 $ composer require dotkernel/dot-authentication
 ```
@@ -34,11 +35,13 @@ Also, concrete implementations should be registered in the service manager using
 ```php
 public function authenticate(ServerRequestInterface $request): AuthenticationResult;
 ```
+
 * method to implement the actual authentication process. It should extract credentials from the `$request` object(Authorization header, custom request attributes etc.). It should return an `AuthenticationResult` object, defined in this package, which carry the authentication status and identity on success.
 
 ```php
 public function challenge(ServerRequestInterface $request): ResponseInterface;
 ```
+
 * this method should return a valid  PSR-7 `ResponseInterface` used to notify the client or browser that it needs to authenticate first(usually using the `WWW-Authenticate` header - usefull for HTTP basic and digest authentication)
 
 ```php
@@ -49,7 +52,6 @@ public function clearIdentity();
 ```
 
 * these methods are used to check if authenticated, get the authenticated identity object, force set an identity(maybe useful for auto-login) or clear an identity(logout)
-
 
 ## IdentityInterface
 

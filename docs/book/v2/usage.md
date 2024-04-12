@@ -11,11 +11,13 @@ Also, concrete implementations should be registered in the service manager using
 ```php
 public function authenticate(ServerRequestInterface $request): AuthenticationResult;
 ```
+
 * method to implement the actual authentication process. It should extract credentials from the `$request` object(Authorization header, custom request attributes etc.). It should return an `AuthenticationResult` object, defined in this package, which carry the authentication status and identity on success.
 
 ```php
 public function challenge(ServerRequestInterface $request): ResponseInterface;
 ```
+
 * this method should return a valid  PSR-7 `ResponseInterface` used to notify the client or browser that it needs to authenticate first(usually using the `WWW-Authenticate` header - usefull for HTTP basic and digest authentication)
 
 ```php
